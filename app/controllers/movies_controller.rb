@@ -11,7 +11,7 @@ class MoviesController < ApplicationController
   def create
     @movie = Movie.create(movie_params)
     if @movie.save
-      redirect_to movies_show_path
+      redirect_to movies_show_path(@movie.id)
     else
       render 'new'
     end
@@ -21,9 +21,25 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
   end
 
-
   def edit
     @movie = Movie.find(params[:id])
+  end
+
+  def update
+    @movie = Movie.find(params[:id])
+    @movie.update(movie_params)
+    if @movie.save
+      redirect_to "/movies/#{@movie.id}"
+    else
+      render 'edit'
+    end
+  end
+
+  def delete
+    @movie = Movie.find(params[:id])
+    @movie.destroy
+
+    redirect_to movies_path
   end
 
   private

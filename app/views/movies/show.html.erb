@@ -5,5 +5,7 @@
 <%= @movie.director %><br>
 
 <h3>Description:</h3>
-<%= @movie.description %>
-<%= link_to "Edit", movies_edit_path, :class => "btn btn-default" %>
+<%= @movie.description %><br>
+<%= link_to "Edit", movie_edit_path, :class => "btn btn-default" %>
+<%= link_to "Delete", movie_delete_path, :class => "btn btn-danger" %>
+<%= link_to "View All Movies", movies_path, :class => "btn btn-default" %>

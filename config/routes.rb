@@ -4,8 +4,10 @@ MediaRanker::Application.routes.draw do
   get '/movies', to: 'movies#index'
   get '/movies/new', to: 'movies#new'
   post '/movies', to: 'movies#create'
-  get '/movies/:id', to: 'movies#show'
-  get '/movies/:id/edit', to: 'movies#edit', as: :movies_edit
+  get '/movies/:id', to: 'movies#show', as: :movies_show
+  get '/movies/:id/edit', to: 'movies#edit', as: :movie_edit
+  patch '/movies/:id', to: 'movies#update', as: :movie_update
+  get '/movies/:id/delete', to: 'movies#delete', as: :movie_delete
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
