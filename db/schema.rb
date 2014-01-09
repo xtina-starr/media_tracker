@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140107005107) do
+ActiveRecord::Schema.define(version: 20140109171225) do
 
   create_table "albums", force: true do |t|
     t.string "album_name"
@@ -26,9 +26,10 @@ ActiveRecord::Schema.define(version: 20140107005107) do
   end
 
   create_table "movies", force: true do |t|
-    t.string "movie_name"
-    t.string "director"
-    t.text   "description"
+    t.string  "movie_name"
+    t.string  "director"
+    t.text    "description"
+    t.integer "votes",       default: 0
   end
 
 end
