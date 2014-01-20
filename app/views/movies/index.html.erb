@@ -1,4 +1,4 @@
 <% Movie.all.each do |m| %>
   <%= link_to m.movie_name, "/movies/#{m.id}" %><br>
 <% end %>
-
+<%= link_to "Add a Movie", new_movie_path, :class => "btn btn-default" %>

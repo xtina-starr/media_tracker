@@ -1,0 +1,15 @@
+<h3>Book:</h3>
+<%= @book.book_name %><br>
+
+<h3>Author:</h3>
+<%= @book.author %><br>
+
+<h3>Votes: <%= @book.votes %></h3>
+
+<h3>Description:</h3>
+<%= @book.description %><br>
+
+<%= link_to "Upvote", book_vote_path(@book.id), :class => "btn btn-primary" %><br> 
+<%= link_to "Edit", book_edit_path, :class => "btn btn-default" %>
+<%= link_to "Delete", book_delete_path(@book.id), :class => "btn btn-danger" %>
+<%= link_to "View All Books", books_path, :class => "btn btn-default" %>

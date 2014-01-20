@@ -32,6 +32,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+
+gem 'simplecov', :require => false, :group => :test
+
 group :development do
   gem "better_errors"
   gem "binding_of_caller"

@@ -1,0 +1,11 @@
+<h3>Album:</h3>
+<%= @album.album_name %><br>
+
+<h3>Artist:</h3>
+<%= @album.artist %><br>
+
+<h3>Description:</h3>
+<%= @album.description %><br>
+
+<%= link_to "Edit", album_edit_path(@album.id), :class => "btn btn-default" %>
+<%= link_to "View All Albums", albums_path, :class => "btn btn-default" %> 
